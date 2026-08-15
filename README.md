@@ -15,4 +15,4 @@
 <p align="center">
 <a href="https://github.com/CoffeeCheese"></a>
 <a href="https://blog.csdn.net/qq_41048567?type=blog"><img alt="csdn" src="./assets/csdn-stats.svg"/></a>
-<a href="https://github.com/CoffeeCheese"><img alt="github" src="https://github-stats-extended.vercel.app/api?username=CoffeeCheese&theme=transparent"/></a></p>
+<a href="https://github.com/CoffeeCheese"><img alt="github" src="./assets/github-stats.svg"/></a></p>

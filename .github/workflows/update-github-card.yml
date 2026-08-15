@@ -1,0 +1,89 @@
+name: Update GitHub stats snapshot
+
+on:
+  schedule:
+    - cron: "47 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-github-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Download and validate card
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          card_url="https://github-stats-extended.vercel.app/api?username=CoffeeCheese&theme=transparent&v=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          temp_dir="$(mktemp -d)"
+          candidate="$temp_dir/github-stats.svg"
+          headers="$temp_dir/headers"
+          trap 'rm -rf "$temp_dir"' EXIT
+
+          valid=false
+          for attempt in 1 2 3 4; do
+            echo "Download attempt $attempt of 4"
+            if curl \
+              --fail \
+              --silent \
+              --show-error \
+              --location \
+              --connect-timeout 10 \
+              --max-time 25 \
+              --dump-header "$headers" \
+              --output "$candidate" \
+              "$card_url"; then
+              size="$(wc -c < "$candidate")"
+              if grep -qi '^content-type: image/svg+xml' "$headers" \
+                && grep -q '<svg' "$candidate" \
+                && grep -q '</svg>' "$candidate" \
+                && grep -q 'GitHub Stats' "$candidate" \
+                && grep -q 'data-testid="commits"' "$candidate" \
+                && ! grep -Eqi 'GATEWAY_TIMEOUT|FUNCTION_INVOCATION_TIMEOUT|Error Fetching Resource' "$candidate" \
+                && (( size >= 500 && size <= 100000 )); then
+                valid=true
+                break
+              fi
+            fi
+
+            rm -f "$candidate" "$headers"
+            if (( attempt < 4 )); then
+              sleep "$((attempt * 10))"
+            fi
+          done
+
+          if [[ "$valid" != true ]]; then
+            echo "::error::No valid GitHub stats SVG was returned; keeping the existing snapshot."
+            exit 1
+          fi
+
+          mkdir -p assets
+          mv "$candidate" assets/github-stats.svg
+
+      - name: Commit updated snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- assets/github-stats.svg; then
+            echo "GitHub stats snapshot is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg
+          git commit -m "chore: refresh GitHub stats snapshot"
+          git push
