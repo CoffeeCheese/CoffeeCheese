@@ -11,16 +11,17 @@
   <g transform='matrix(1, 0, 0, 1, 0, 0)' filter='url(#Card)'>
     <rect id='Card-2' data-name='Card' width='364' height='192' rx='8' transform='translate(9 6)' fill='#ffffff'/>
   </g>
-  <text id='key_0' x='50%' y='44' dominant-baseline='middle' text-anchor='middle' fill='#ff8f1c' font-size='18' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' font-weight='700'>桌子椅子凳子。's CSDN Stats</text><text id='key_1' transform='translate(63 83)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>Articles</tspan></text>
-  <text id='key_2' transform='translate(63 120)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>Fans</tspan></text>
-  <text id='key_3' transform='translate(63 157)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>Likes</tspan></text>
-  <text id='key_4' transform='translate(220 83)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>Replies</tspan></text>
-  <text id='key_5' transform='translate(220 120)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>Views</tspan></text>
-  <text id='key_6' transform='translate(220 157)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>Credit</tspan></text>
-  <text id='key_7' transform='translate(134 83)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>12</tspan></text>
-  <text id='key_8' transform='translate(134 120)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>8119</tspan></text>
-  <text id='key_9' transform='translate(134 157)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>789</tspan></text>
-  <text id='key_10' transform='translate(295 83)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>636</tspan></text>
-  <text id='key_11' transform='translate(295 120)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>60k+</tspan></text>
-  <text id='key_12' transform='translate(295 157)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'><tspan x='0' y='0'>1866</tspan></text>
+  <text id='key_0' x='50%' y='44' dominant-baseline='middle' text-anchor='middle' fill='#ff8f1c' font-size='18' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei'  font-weight="700" >桌子椅子凳子。's CSDN Stats</text><text id='key_1' transform='translate(63 83)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>Articles</tspan></text>
+<text id='key_2' transform='translate(63 120)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>Fans</tspan></text>
+<text id='key_3' transform='translate(63 157)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>Likes</tspan></text>
+<text id='key_4' transform='translate(220 83)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>Replies</tspan></text>
+<text id='key_5' transform='translate(220 120)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>Views</tspan></text>
+<text id='key_6' transform='translate(220 157)' fill='#250E62' font-size='13.5' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>Credit</tspan></text>
+<text id='key_7' transform='translate(134 83)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>12</tspan></text>
+<text id='key_8' transform='translate(134 120)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>8119</tspan></text>
+<text id='key_9' transform='translate(134 157)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>789</tspan></text>
+<text id='key_10' transform='translate(295 83)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>636</tspan></text>
+<text id='key_11' transform='translate(295 120)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>60k+</tspan></text>
+<text id='key_12' transform='translate(295 157)' fill='#509E2F' font-size='15' font-family='SegoeUI, Segoe UI, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei' ><tspan x='0' y='0'>1866</tspan></text>
+
 </svg>
