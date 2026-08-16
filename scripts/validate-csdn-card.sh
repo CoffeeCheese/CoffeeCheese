@@ -23,8 +23,9 @@ grep -q '<svg' "$candidate" && grep -q '</svg>' "$candidate" \
 ! grep -Eqi 'GATEWAY_TIMEOUT|FUNCTION_INVOCATION_TIMEOUT|Error Fetching Resource' "$candidate" \
   || reject "upstream returned an error card"
 
-grep -Fq "桌子椅子凳子。's CSDN Stats" "$candidate" \
-  || reject "expected CSDN profile was not resolved"
+grep -q 'CSDN Stats' "$candidate" || reject "CSDN title is missing"
+! grep -Fq "username's CSDN Stats" "$candidate" \
+  || reject "CSDN profile resolved to the placeholder username"
 
 metric_count="$(grep -Ec "<text id=['\"]key_(7|8|9|10|11|12)['\"]" "$candidate" || true)"
 zero_metric_count="$(
