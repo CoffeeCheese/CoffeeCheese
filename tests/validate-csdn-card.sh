@@ -37,4 +37,3 @@ awk '
 assert_rejected "$all_zero" "six zero metrics"
 
 echo "CSDN card validation regression tests passed."
-

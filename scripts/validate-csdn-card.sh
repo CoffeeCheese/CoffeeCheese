@@ -35,4 +35,3 @@ zero_metric_count="$(
 
 (( metric_count == 6 )) || reject "expected six CSDN metrics, found $metric_count"
 (( zero_metric_count < 6 )) || reject "all six CSDN metrics are zero"
-
