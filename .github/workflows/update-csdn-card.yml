@@ -21,6 +21,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v5
 
+      - name: Test card validator
+        shell: bash
+        run: tests/validate-csdn-card.sh
+
       - name: Download and validate card
         shell: bash
         run: |
@@ -45,13 +49,7 @@ jobs:
               --dump-header "$headers" \
               --output "$candidate" \
               "$card_url"; then
-              size="$(wc -c < "$candidate")"
-              if grep -qi '^content-type: image/svg+xml' "$headers" \
-                && grep -q '<svg' "$candidate" \
-                && grep -q '</svg>' "$candidate" \
-                && grep -q 'CSDN Stats' "$candidate" \
-                && ! grep -Eqi 'GATEWAY_TIMEOUT|FUNCTION_INVOCATION_TIMEOUT|Error Fetching Resource' "$candidate" \
-                && (( size >= 500 && size <= 100000 )); then
+              if scripts/validate-csdn-card.sh "$candidate" "$headers"; then
                 valid=true
                 break
               fi
